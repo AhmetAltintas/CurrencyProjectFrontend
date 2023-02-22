@@ -1,0 +1,28 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Currency Name</th>
+        <th scope="col">Forex Buying</th>
+        <th scope="col">Forex Selling</th>
+        <th scope="col">Banknote Buying</th>
+        <th scope="col">Banknote Selling</th>
+        <th scope="col">Cross Rate USD</th>
+        <th scope="col">Currency Date</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of currencies">
+      <tr>
+        <td>{{ item.id }}</td>
+        <td>{{ item.currencyName }}</td>
+        <td>{{ item.forexBuying }}</td>
+        <td>{{ item.forexSelling }}</td>
+        <td>{{ item.banknoteBuying }}</td>
+        <td>{{ item.banknoteSelling }}</td>
+        <td>{{ item.crossRateUSD }}</td>
+        <td>{{ item.currencyDate }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
