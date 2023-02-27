@@ -4,7 +4,6 @@ import { CurrencyComponent } from './components/currency/currency.component';
 
 const routes: Routes = [
   {path: "", pathMatch: "full", component:CurrencyComponent},
-  {path: "currencies", component: CurrencyComponent}
 ];
 
 @NgModule({

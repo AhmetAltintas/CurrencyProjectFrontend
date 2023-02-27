@@ -12,8 +12,8 @@
         <th scope="col">Currency Date</th>
       </tr>
     </thead>
-    <tbody *ngFor="let item of currencies">
-      <tr>
+    <tbody>
+      <tr *ngFor="let item of currencies">
         <td>{{ item.id }}</td>
         <td>{{ item.currencyName }}</td>
         <td>{{ item.forexBuying }}</td>
