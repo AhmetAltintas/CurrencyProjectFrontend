@@ -1,4 +1,9 @@
 <div>
+  <input [(ngModel)]="selectedDate" type="date">
+  <button (click)="getAllByDate()">Tarih seçiniz</button>
+  <button (click)="reload()">Bugün</button>
+</div>
+<div>
   <table class="table">
     <thead>
       <tr>
@@ -15,13 +20,13 @@
     <tbody>
       <tr *ngFor="let item of currencies">
         <td>{{ item.id }}</td>
-        <td>{{ item.currencyName }}</td>
-        <td>{{ item.forexBuying }}</td>
-        <td>{{ item.forexSelling }}</td>
-        <td>{{ item.banknoteBuying }}</td>
-        <td>{{ item.banknoteSelling }}</td>
-        <td>{{ item.crossRateUSD }}</td>
-        <td>{{ item.currencyDate }}</td>
+        <td>{{ item.currencyName ? item.currencyName : '-'}}</td>
+        <td>{{ item.forexBuying ? item.forexBuying : '-'}}</td>
+        <td>{{ item.forexSelling ? item.forexSelling : '-'}}</td>
+        <td>{{ item.banknoteBuying ? item.banknoteBuying : '-'}}</td>
+        <td>{{ item.banknoteSelling ? item.banknoteSelling : '-'}}</td>
+        <td>{{ item.crossRateUSD ? item.crossRateUSD : '-'}}</td>
+        <td>{{ item.currencyDate ? (item.currencyDate | date:'dd/MM/yyyy') : '-'}}</td>
       </tr>
     </tbody>
   </table>

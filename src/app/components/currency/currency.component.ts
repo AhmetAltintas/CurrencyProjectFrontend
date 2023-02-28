@@ -1,6 +1,4 @@
-import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Currency } from 'src/app/models/entities/currency';
 import { CurrencyService } from 'src/app/services/currency.service';
 
@@ -12,27 +10,15 @@ import { CurrencyService } from 'src/app/services/currency.service';
 export class CurrencyComponent implements OnInit{
   
   currencies: Currency[] = [];
+  selectedDate: string;
+
   constructor(
     private currencyService:CurrencyService,
-    private activatedRoute:ActivatedRoute,
-    private datePipe:DatePipe
+
   ){}
 
   ngOnInit(): void {
-    this.activatedRoute.params.subscribe(params=>{
-      if (params['date']) {
-        this.getAllByDate(params['date']);
-      }
-      else {
-        this.getAllToday();
-      }
-    })
-  }
-
-  getAllByDate(date:Date) {
-    this.currencyService.getAllByDate(date).subscribe(response=>{
-      this.currencies = response.data
-    })
+    this.getAllToday();
   }
 
   getAllToday() {
@@ -41,5 +27,16 @@ export class CurrencyComponent implements OnInit{
     this.currencyService.getAllByDate(new Date(today)).subscribe(response=> {
       this.currencies = response.data
     })
+  }
+
+  getAllByDate() {
+    let date = new Date(this.selectedDate).setHours(3,0,0,0);
+    this.currencyService.getAllByDate(new Date(date)).subscribe(response=> {
+      this.currencies = response.data
+    })
+  }
+
+  reload(){
+    window.location.reload();
   }
 }
