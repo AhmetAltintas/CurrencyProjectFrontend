@@ -1,0 +1,51 @@
+<thead></thead>
+<tbody>
+  <div class="calculator">
+    <ul>
+    
+    
+      <li class="amount"><b>Miktar</b></li>
+      <li class="entry">
+        <input
+          id="amount"
+          type="number"
+          [(ngModel)]="amount"
+          autocomplete="off"
+        />
+      </li>
+
+
+      <br />
+
+
+
+      <li class="from"><b>From</b></li>
+      <li class="fromCurrency">
+        <select name="" id="fromCurrency" >
+          <option
+            *ngFor="let item of currencies"
+          >
+            {{ item.currencyName }}
+          </option>
+        </select>
+      </li>
+
+      <li class="to"><b>To</b></li>
+      <li class="toCurrency">
+        <select #c2 name="" id="toCurrency" >
+          <option
+            *ngFor="let item of currencies"
+            [value]="item.banknoteBuying"
+          >
+            {{ item.currencyName }}
+          </option>
+        </select>
+      </li>
+
+
+      
+      <li class="result"><b>Sonuç</b></li>
+      <li><p name="result" id="result" type="text"></p></li>
+    </ul>
+  </div>
+</tbody>

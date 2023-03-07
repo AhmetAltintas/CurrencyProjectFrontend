@@ -1,8 +1,12 @@
-<div>
-  <input [(ngModel)]="selectedDate" type="date">
-  <button (click)="getAllByDate()">Tarih seçiniz</button>
-  <button (click)="reload()">Bugün</button>
+<br>
+<div class="form">
+  <form [formGroup]="dateFormGroup">
+    <input type="date" id="currentDate" formControlName="currentDate">
+    <button (click)="setCurrentDate()">Tarihe Git</button>
+    <button (click)="reload()">Bugün</button>
+  </form>
 </div>
+<br>
 <div>
   <table class="table">
     <thead>
