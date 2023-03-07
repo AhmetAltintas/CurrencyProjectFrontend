@@ -8,10 +8,11 @@ import { CurrencyService } from 'src/app/services/currency.service';
   styleUrls: ['./calculation.component.css'],
 })
 export class CalculationComponent implements OnInit {
+  
   amount: number;
   fromCurrency: number;
   toCurrency: number;
-  result: number;
+  result: number | null
 
   currencies: Currency[];
 
@@ -21,14 +22,19 @@ export class CalculationComponent implements OnInit {
     this.currencyService.getCurrencies().subscribe((currencies)=> {
       this.currencies = currencies;
       this.currencies.push(newCurrency)
-      console.log(currencies[0].currencyDate)
     })
   }
 
 
-  calculate(amount: number, fromCurrency: number, toCurrency: number) {
-    var result = amount * (fromCurrency / toCurrency);
-    return result;
+  calculate() {
+    if (this.amount && this.fromCurrency && this.toCurrency) {
+      const fromCurrencyRate = this.fromCurrency / 1; // get the rate of the selected fromCurrency
+      const toCurrencyRate = this.toCurrency / 1; // get the rate of the selected toCurrency
+      const convertedAmount = this.amount * (fromCurrencyRate / toCurrencyRate); // calculate the converted amount
+      this.result = convertedAmount; // set the result value to the converted amount
+    } else {
+      this.result = null; // if any of the input values are not available, set the result to null
+    }
   }
 }
 
