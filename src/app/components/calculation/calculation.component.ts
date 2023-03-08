@@ -42,11 +42,13 @@ export class CalculationComponent implements OnInit {
 
 const newCurrency: Currency = {
   id: 1,
+  currencyCode: "TL",
   currencyName: 'TURK LIRASI',
   forexBuying: 1,
   forexSelling: 1,
   banknoteBuying: 1,
   banknoteSelling: 1,
   crossRateUSD: 1,
+  currencyImage: "assets/images/TR.jpg",
   currencyDate: new Date(),
 };
