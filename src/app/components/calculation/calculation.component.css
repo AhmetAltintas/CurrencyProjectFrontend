@@ -1,65 +1,48 @@
-*{
-    box-sizing:border-box;
-}
-body{
-    background-color: steelblue;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Segoe UI';
-}
-
-.form{
-    background-color: whitesmoke !important;
-    border: 2px solid rgb(220, 220, 220);
-    width: 600px;
-    opacity: 1;
-    padding: 20px;
-}
-
-.calculator li{
-    margin: 0px auto;
-    display: block;
-    overflow: hidden;
-}
-
-.calculator{
-    font-size: 14px;
-    color:steelblue;
-}
-
-.calculator input[type=text] {
-    width: 300px;
-    padding: 6px 10px;
-    margin: 18px 0;
-    border: 3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 80%;
+    max-width: 600px;
   }
-
-#result[type=text] {
-    width: 300px;
-    height: 35px;
-    padding: 6px 10px;
-    margin: 18px 0;
-    border: 3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
+  
+  .calculator ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
   }
-
-.calculator select{
-    width: 300px;
-    padding: 6px 10px;
-    margin-bottom: 18px;
-    border:3px solid #ccc;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-    outline: none;
-}
-
-.calculator select:focus{
-    border: 3px solid steelblue;   
-}
-
-
+  
+  .calculator li {
+    margin: 10px 0;
+  }
+  
+  .calculator li.amount, .calculator li.from, .calculator li.to, .calculator li.result {
+    font-weight: bold;
+  }
+  
+  .calculator input[type="number"], .calculator select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .calculator button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .calculator button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .calculator #result {
+    font-size: 20px;
+    font-weight: bold;
+  }

@@ -1,14 +1,8 @@
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
+.container{
+    display:flex;
+    justify-content: space-between;
 }
-
-#currency {
-  float: left;
-}
-
-#calculation {
-  float: right;
+.calculation{
+    margin-left: 20px;
+    margin-top: 97px;
 }

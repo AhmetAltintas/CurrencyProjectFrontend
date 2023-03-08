@@ -15,7 +15,7 @@
       <li class="from"><b>From</b></li>
       <li class="fromCurrency">
         <select name="" id="fromCurrency" [(ngModel)]="fromCurrency">
-          <option *ngFor="let item of currencies" [ngValue]="item.banknoteBuying">
+          <option *ngFor="let item of currencies" [ngValue]="item.forexBuying">
             {{ item.currencyName }}
           </option>
         </select>
@@ -23,7 +23,7 @@
       <li class="to"><b>To</b></li>
       <li class="toCurrency">
         <select #c2 name="" id="toCurrency" [(ngModel)]="toCurrency">
-          <option *ngFor="let item of currencies" [ngValue]="item.banknoteBuying">
+          <option *ngFor="let item of currencies" [ngValue]="item.forexBuying">
             {{ item.currencyName }}
           </option>
         </select>
