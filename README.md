@@ -1,28 +1,5 @@
 # CurrencyProjectFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# CurrencyProjectFrontend" 
+![ss1](https://user-images.githubusercontent.com/111902533/223828491-232937d5-14b4-4348-8fb3-b16e7e89eff0.png)
+![ss2](https://user-images.githubusercontent.com/111902533/223828551-9b7027f6-50cb-4f38-8f65-df2d6bd6c5f4.png)
+![ss3](https://user-images.githubusercontent.com/111902533/223828567-cb445937-9664-425f-adfa-71639dbdeed4.png)
